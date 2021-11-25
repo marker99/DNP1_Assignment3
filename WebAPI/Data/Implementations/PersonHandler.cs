@@ -3,11 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Models;
 using WebAPI.FileData;
+using WebAPI.Persistence;
 
 namespace WebAPI.Data.Implementations
 {
     public class PersonHandler : IPersonHandler
     {
+        private AdultDBContext _adultDbContext;
         private static FileContext _fileContext;
 
         public PersonHandler()
