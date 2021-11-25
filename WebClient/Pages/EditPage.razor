@@ -1,6 +1,6 @@
 ﻿@page "/EditPage/{Id:int}"
-@	using global::Models
-@	using WebClient.Data
+@using Entities.Models
+@using WebClient.Data
 @inject IPersonHandler _personHandler
 @inject NavigationManager _navMgr
 @attribute [Authorize(Policy = "SecurityLevel3")]

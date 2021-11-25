@@ -84,7 +84,7 @@ using WebClient.Shared;
 #nullable disable
 #nullable restore
 #line 2 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\EditPage.razor"
-using global::Models;
+using Entities.Models;
 
 #line default
 #line hidden

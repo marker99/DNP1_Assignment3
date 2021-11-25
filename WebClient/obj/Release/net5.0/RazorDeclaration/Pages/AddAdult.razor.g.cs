@@ -83,7 +83,7 @@ using WebClient.Shared;
 #nullable disable
 #nullable restore
 #line 3 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\AddAdult.razor"
-using Models;
+using Entities.Models;
 
 #line default
 #line hidden
@@ -97,13 +97,6 @@ using Data;
 #nullable disable
 #nullable restore
 #line 5 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\AddAdult.razor"
-using global::Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 6 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\AddAdult.razor"
 using Microsoft.AspNetCore.Components;
 
 #line default
@@ -125,7 +118,7 @@ using Microsoft.AspNetCore.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 97 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\AddAdult.razor"
+#line 96 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\AddAdult.razor"
        
     private Adult _newAdult;
 
