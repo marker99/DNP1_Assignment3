@@ -7,8 +7,6 @@ namespace WebAPI.Persistence
     {
         public DbSet<Adult> Adults { get; set; }
         public DbSet<Job> Jobs { get; set; }
-        public DbSet<Person> Persons { get; set; }
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
