@@ -100,31 +100,41 @@ using WebClient.Authentication;
 #nullable restore
 #line 29 "D:\GitHubProjects\marker99\DNP1_Assignment3\WebClient\Pages\LoginPage.razor"
        
-    private string _username;
-    private string _password;
-    private string _errorMessage;
+	private string _username;
+	private string _password;
+	private string _errorMessage;
 
-    public async Task PerformLogin( )
-    {
-        _errorMessage = "";
-        try {
-            ((CustomAuthenticationStateProvider) _auth).ValidateLogin(_username, _password);
-            _username = "";
-            _password = "";
-        } catch (Exception e) {
-            _errorMessage = "Invalid Credentials";
-        }
-    }
+	public async Task PerformLogin()
+	{
+		_errorMessage = "";
+		try
+		{
+			await ((CustomAuthenticationStateProvider)_auth).ValidateLogin(_username, _password);
+			Console.WriteLine("Login has been Validated");
+			_username = "";
+			_password = "";
+			_navMgr.NavigateTo("/");
+		}
+		catch (Exception e)
+		{
+			_errorMessage = e.Message;
+		}
+	}
 
-    public async Task PerformLogout( ) {
-        _errorMessage = "";
-        _username = "";
-        _password = "";
-        try {
-            ((CustomAuthenticationStateProvider) _auth).Logout( );
-            _navMgr.NavigateTo("/");
-        } catch (Exception e) { }
-    }
+	public async Task PerformLogout()
+	{
+		_errorMessage = "";
+		_username = "";
+		_password = "";
+		try
+		{
+			((CustomAuthenticationStateProvider)_auth).Logout();
+			_navMgr.NavigateTo("/");
+		}
+		catch (Exception e)
+		{
+		}
+	}
 
 
 #line default

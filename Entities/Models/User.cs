@@ -12,5 +12,10 @@
 			Password = password;
 			SecurityLevel = securityLevel;
 		}
+
+		public User()
+		{
+
+		}
 	}
 }

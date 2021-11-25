@@ -45,22 +45,14 @@ namespace WebAPI.Data.Implementations
 		public async Task UpdateAdultAsync(Adult updatedAdult)
 		{
 			Adult a = await _adultDbContext.FindAsync<Adult>(updatedAdult.Id);
-			//Adult a = _adultDbContext.Adults.FirstOrDefault(a => a.Id == updatedAdult.Id);
 			if (a == null)
 			{
-				if (await _adultDbContext.Jobs.ContainsAsync(updatedAdult.Job))
-				{
-
-				}
-					await _adultDbContext.AddAsync<Adult>(updatedAdult);
-				//await NewAdultAsync(updatedAdult);
+				await _adultDbContext.AddAsync<Adult>(updatedAdult);
 			}
 			else
 			{
 				_adultDbContext.Update<Adult>(a).CurrentValues.SetValues(updatedAdult);
-				//await UpdateNonMatching(a, updatedAdult);
 			}
-
 			await _adultDbContext.SaveChangesAsync();
 		}
 
@@ -69,21 +61,5 @@ namespace WebAPI.Data.Implementations
 			return await _adultDbContext.Adults.Include(a => a.Job).ToListAsync();
 		}
 
-		// Helper Methods
-
-		// Updating each individual property for an Adult
-		// This all works due to C# being Pass-By-Reference
-		private async Task UpdateNonMatching(Adult oldA, Adult newA)
-		{
-			oldA.FirstName = newA.FirstName;
-			oldA.LastName = newA.LastName;
-			oldA.Age = newA.Age;
-			oldA.Sex = newA.Sex;
-			oldA.Job = newA.Job;
-			oldA.HairColor = newA.HairColor;
-			oldA.EyeColor = newA.EyeColor;
-			oldA.Height = newA.Height;
-			oldA.Weight = newA.Weight;
-		}
 	}
 }

@@ -26,7 +26,7 @@ namespace WebClient
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<IPersonHandler, PersonHandler>();
-            services.AddSingleton<RestClient, RestClient>();
+            services.AddSingleton<IUserService, UserService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
             services.AddAuthorization(options =>
