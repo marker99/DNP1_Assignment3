@@ -29,3 +29,4 @@ C:\Users\Frederik\RiderProjects\DNP1_Assignment3\WebAPI\obj\Debug\net5.0\WebAPI.
 C:\Users\Frederik\RiderProjects\DNP1_Assignment3\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 C:\Users\Frederik\RiderProjects\DNP1_Assignment3\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 C:\Users\Frederik\RiderProjects\DNP1_Assignment3\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
+C:\Users\Frederik\RiderProjects\DNP1_Assignment3\WebAPI\bin\Debug\net5.0\adults.json
