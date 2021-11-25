@@ -7,7 +7,7 @@ namespace WebAPI.Data.Implementations
 {
 	public class UserService : IUserService
 	{
-		private IList<User> _users;
+		private IList<User> _users; // TODO: Move to Database
 
 		public UserService()
 		{
@@ -21,7 +21,7 @@ namespace WebAPI.Data.Implementations
 
 		public User ValidateUser(string username, string password)
 		{
-			return _users.FirstOrDefault(user => user.Username.Equals(username) && user.Password.Equals(password));
+			return _users.FirstOrDefault(user => user.Username.Equals(username) && user.Password.Equals(password)); // TODO: Request check from Database
 		}
 	}
 }
