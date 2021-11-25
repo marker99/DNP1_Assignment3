@@ -1,6 +1,6 @@
 ﻿
+using Entities.Models;
 using System.Threading.Tasks;
-using WebClient.Models;
 
 namespace WebClient.Data
 {

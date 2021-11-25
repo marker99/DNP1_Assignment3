@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Entities.Models;
+using System.Collections.Generic;
 using System.Linq;
-using WebClient.Models;
 
 namespace WebAPI.Data.Implementations
 {
-    public class UserService : IUserService
+	public class UserService : IUserService
     {
         private IList<User> _users;
 

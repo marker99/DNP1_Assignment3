@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Models;
+using Entities.Models;
 
 namespace WebClient.Data
 {

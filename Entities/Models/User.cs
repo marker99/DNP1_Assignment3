@@ -1,4 +1,4 @@
-﻿namespace WebClient.Models
+﻿namespace Entities.Models
 {
 	public class User
 	{

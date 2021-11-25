@@ -5,8 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Models;
-using WebClient.Models;
+using Entities.Models;
 
 namespace WebClient.Data.Implementations
 {

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Models;
+using Entities.Models;
 
 namespace WebAPI.Data
 {
-    public interface IPersonHandler
+	public interface IPersonHandler
     {
         //Task<bool> NewFamilyAsync(Family newFamily);
         //Task RemoveFamilyAsync(string streetName, int houseNumber);

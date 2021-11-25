@@ -1,13 +1,13 @@
 ﻿using System;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Data;
 using WebAPI.Data.Implementations;
-using WebClient.Models;
 
 
 namespace WebAPI.Controllers
 {
-    [ApiController]
+	[ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {

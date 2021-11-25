@@ -1,4 +1,4 @@
-﻿using WebClient.Models;
+﻿using Entities.Models;
 
 namespace WebAPI.Data
 {

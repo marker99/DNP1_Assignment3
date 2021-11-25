@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using Models;
 using WebAPI.Data;
 
 namespace WebAPI.Controllers
 {
-    [ApiController]
+	[ApiController]
     [Route("[controller]")]
     public class AdultController : ControllerBase
     {

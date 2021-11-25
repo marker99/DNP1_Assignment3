@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Entities.Models;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 using WebClient.Data;
-using WebClient.Models;
 
 namespace WebClient.Authentication
 {

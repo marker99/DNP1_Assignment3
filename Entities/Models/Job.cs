@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Models
+namespace Entities.Models
 {
-    public class Job
-    {
-        [Key]
-        public string JobTitle { get; set; }
-        public int Salary { get; set; }
-    }
+	public class Job
+	{
+		[Key]
+		public string JobTitle { get; set; }
+		public int Salary { get; set; }
+	}
 }

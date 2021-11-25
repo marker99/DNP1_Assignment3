@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using Models;
+using Entities.Models;
 
 
-namespace WebAPI.FileData{
+namespace WebAPI.FileData
+{
 	public class FileContext {
 		public IList<Adult> Adults {
 			get; private set;
