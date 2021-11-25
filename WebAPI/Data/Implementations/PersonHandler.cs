@@ -46,11 +46,13 @@ namespace WebAPI.Data.Implementations
 		{
 			Adult a = await _adultDbContext.FindAsync<Adult>(updatedAdult.Id);
 			if (a == null)
-			{
+			{ // Does not Exist
+				// Add new Adult
 				await _adultDbContext.AddAsync<Adult>(updatedAdult);
 			}
 			else
-			{
+			{ // Does Exist
+				// Update already existing adult
 				_adultDbContext.Update<Adult>(a).CurrentValues.SetValues(updatedAdult);
 			}
 			await _adultDbContext.SaveChangesAsync();
