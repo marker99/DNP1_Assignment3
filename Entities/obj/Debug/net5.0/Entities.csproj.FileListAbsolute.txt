@@ -1,0 +1,12 @@
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\bin\Debug\net5.0\Entities.dll
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\bin\Debug\net5.0\ref\Entities.dll
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\bin\Debug\net5.0\Entities.pdb
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.dll
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\ref\Entities.dll
+D:\GitHubProjects\marker99\DNP1_Assignment3\Entities\obj\Debug\net5.0\Entities.pdb
