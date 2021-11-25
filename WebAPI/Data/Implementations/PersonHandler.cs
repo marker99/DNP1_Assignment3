@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Models;
 using WebAPI.FileData;
 using WebAPI.Persistence;
@@ -12,37 +13,38 @@ namespace WebAPI.Data.Implementations
         private AdultDBContext _adultDbContext;
         private static FileContext _fileContext;
 
-        public PersonHandler()
+        public PersonHandler(AdultDBContext _adultDbContext)
         {
             _fileContext = new();
+            this._adultDbContext = _adultDbContext;
         }
 
         public async Task NewAdultAsync(Adult newAdult)
         {
-            int maxID = _fileContext.Adults.Max(a => a.Id);
-            newAdult.Id = maxID + 1;
-            _fileContext.Adults.Add(newAdult);
-            _fileContext.SaveChanges();
+            int maxId = _adultDbContext.Adults.Max(a => a.Id);
+            newAdult.Id = maxId + 1;
+            await _adultDbContext.Adults.AddAsync(newAdult);
+            await _adultDbContext.SaveChangesAsync();
         }
 
         public async Task RemoveAdultAsync(int id)
         {
-            Adult a = _fileContext.Adults.FirstOrDefault(a => a.Id == id);
-            if (a != null)
+            Adult toDelete = _adultDbContext.Adults.FirstOrDefault(a => a.Id == id);
+            if (toDelete != null)
             {
-                _fileContext.Adults.Remove(a);
-                _fileContext.SaveChanges();
+                _adultDbContext.Adults.Remove(toDelete);
+                await _adultDbContext.SaveChangesAsync();
             }
         }
 
         public async Task<Adult> GetAdultAsync(int id)
         {
-            return _fileContext.Adults.FirstOrDefault(a => a.Id == id);
+            return _adultDbContext.Adults.FirstOrDefault(a => a.Id == id);
         }
 
         public async Task UpdateAdultAsync(Adult updatedAdult)
         {
-            Adult a = _fileContext.Adults.FirstOrDefault(a => a.Id == updatedAdult.Id);
+            Adult a = _adultDbContext.Adults.FirstOrDefault(a => a.Id == updatedAdult.Id);
             if (a == null)
             {
                 await NewAdultAsync(updatedAdult);
@@ -52,12 +54,12 @@ namespace WebAPI.Data.Implementations
                 await UpdateNonMatching(a, updatedAdult);
             }
 
-            _fileContext.SaveChanges();
+            await _adultDbContext.SaveChangesAsync();
         }
 
         public async Task<IList<Adult>> GetAdultsAsync()
         {
-            return _fileContext.Adults;
+            return await _adultDbContext.Adults.ToListAsync();
         }
 
         // Helper Methods
