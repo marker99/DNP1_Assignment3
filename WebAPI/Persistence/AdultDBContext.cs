@@ -12,7 +12,7 @@ namespace WebAPI.Persistence
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			//name of the database
-			optionsBuilder.UseSqlite(@"Data Source = D:\GitHubProjects\marker99\DNP1_Assignment3\WebAPI_2\Adults.db");
+			optionsBuilder.UseSqlite(@"Data Source = Adults.db");
 		}
 	}
 }
