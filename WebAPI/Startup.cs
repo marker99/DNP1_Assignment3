@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebAPI.Data;
 using WebAPI.Data.Implementations;
+using WebAPI.Persistence;
 
 namespace WebAPI
 {
@@ -31,6 +32,7 @@ namespace WebAPI
 			services.AddControllers();
 			services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" }); });
 			services.AddScoped<IPersonHandler, PersonHandler>();
+			services.AddSingleton<AdultDBContext, AdultDBContext>();
 			services.AddScoped<IUserService, UserService>();
 
 		}

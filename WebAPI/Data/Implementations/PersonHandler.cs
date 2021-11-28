@@ -13,10 +13,10 @@ namespace WebAPI.Data.Implementations
 		private static AdultDBContext _adultDbContext;
 		//private static FileContext _fileContext;
 
-		public PersonHandler()
+		public PersonHandler(AdultDBContext adultDBContext)
 		{
 			//_fileContext = new();
-			_adultDbContext = new();
+			_adultDbContext = adultDBContext;
 		}
 
 		// Deprecated

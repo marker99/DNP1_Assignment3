@@ -10,7 +10,13 @@ namespace WebAPI.Controllers
 	[Route("[controller]")]
 	public class UserController : ControllerBase
 	{
-		private IUserService _user = new UserService();
+		private IUserService _user;
+
+		public UserController(IUserService userService)
+		{
+			_user = userService;
+		}
+
 
 		[HttpPost]
 		public ActionResult GetLoginFromUsername([FromBody] User user)
